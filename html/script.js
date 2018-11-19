@@ -33,18 +33,27 @@ function guestNameButton1 () {
 
 
     }
+    else {
+        document.getElementById('add1').disabled = true;
+        document.getElementById('add1').innerHTML = "Room Full"
+    }
 }
 
 function remove1 () {
     var getV1 = document.getElementById('people1').value;
-    document.getElementById('people1').value = "";
     var getLi1 = document.getElementsByTagName('li')[getV1 - 1];
     var parent1 = getLi1.parentNode;
     parent1.removeChild(getLi1);
+    document.getElementById('add1').disabled = false;
+    document.getElementById('add1').innerHTML = "Check In";
+
+
 }
 function removeAll1 () {
    var removeList1 = document.getElementById('ol1');
    removeList1.innerHTML = '';
+   document.getElementById('add1').disabled = false;
+   document.getElementById('add1').innerHTML = "Check In"
 
 
 }
@@ -69,6 +78,8 @@ function guestNameButton2 () {
     newList2.appendChild(newText2);
     var position2 = document.getElementById('ol2');
     position2.appendChild(newList2);
+    document.getElementById('add2').disabled = false;
+    document.getElementById('add3').innerHTML = "Check In"
     
     newListUl2 = document.createElement('li');
     newListUl2.id = 'ullog2';
@@ -77,18 +88,25 @@ function guestNameButton2 () {
     var positionUl2 = document.getElementById('ullog');
     positionUl2.appendChild(newListUl2);
     }
+    else {
+        document.getElementById('add2').disabled = true;
+        document.getElementById('add2').innerHTML = "Room Full"
+    }
 }
 
 function remove2 () {
     var getV2 = document.getElementById('people2').value;
-    document.getElementById('people2').value = "";
     var getLi2 = document.getElementsByTagName('li')[getV2 - 1];
     var parent2 = getLi2.parentNode;
     parent2.removeChild(getLi2);
+    document.getElementById('add2').disabled = false;
+    document.getElementById('add2').innerHTML = "Check In"
 }
 function removeAll2 () {
    var removeList2 = document.getElementById('ol2');
    removeList2.innerHTML = '';
+   document.getElementById('add2').disabled = false;
+   document.getElementById('add2').innerHTML = "Check In"
 
 
 }
@@ -123,18 +141,25 @@ function guestNameButton3 () {
 
 
     }
+    else {
+        document.getElementById('add3').disabled = true;
+        document.getElementById('add3').innerHTML = "Room Full"
+    }
 }
 
 function remove3 () {
     var getV3 = document.getElementById('people3').value;
-    document.getElementById('people3').value = "";
     var getLi3 = document.getElementsByTagName('li')[getV3 - 1];
     var parent3 = getLi3.parentNode;
     parent3.removeChild(getLi3);
+    document.getElementById('add3').disabled = false;
+    document.getElementById('add3').innerHTML = "Check In"
 }
 function removeAll3 () {
    var removeList3 = document.getElementById('ol3');
    removeList3.innerHTML = '';
+   document.getElementById('add3').disabled = false;
+   document.getElementById('add3').innerHTML = "Check In"
 
 
 }
@@ -164,21 +189,26 @@ function guestNameButton4 () {
     newListUl4.appendChild(newTextUl4);
     var positionUl4 = document.getElementById('ullog');
     positionUl4.appendChild(newListUl4);
-
-
+    }
+    else {
+        document.getElementById('add4').disabled = true;
+        document.getElementById('add4').innerHTML = "Room Full"
     }
 }
 
 function remove4 () {
     var getV4 = document.getElementById('people4').value;
-    document.getElementById('people4').value = "";
     var getLi4 = document.getElementsByTagName('li')[getV4 - 1];
     var parent4 = getLi4.parentNode;
     parent4.removeChild(getLi4);
+    document.getElementById('add4').disabled = false;
+    document.getElementById('add4').innerHTML = "Check In"
 }
 function removeAll4 () {
    var removeList4 = document.getElementById('ol4');
    removeList4.innerHTML = '';
+   document.getElementById('add4').disabled = false;
+   document.getElementById('add4').innerHTML = "Check In"
 
 }
 function lock4 () {
@@ -210,18 +240,25 @@ function guestNameButton5 () {
 
 
     }
+    else {
+        document.getElementById('add5').disabled = true;
+        document.getElementById('add5').innerHTML = "Room Full"
+    }
 }
 
 function remove5 () {
     var getV5 = document.getElementById('people5').value;
-    document.getElementById('people5').value = "";
     var getLi5 = document.getElementsByTagName('li')[getV5 - 1];
     var parent5 = getLi5.parentNode;
     parent5.removeChild(getLi5);
+    document.getElementById('add5').disabled = false;
+    document.getElementById('add5').innerHTML = "Check In"
 }
 function removeAll5 () {
    var removeList5 = document.getElementById('ol5');
    removeList5.innerHTML = '';
+   document.getElementById('add5').disabled = false;
+   document.getElementById('add5').innerHTML = "Check In"
 
 }
 function lock5 () {
@@ -253,18 +290,25 @@ function guestNameButton6 () {
 
 
     }
+    else {
+        document.getElementById('add6').disabled = true;
+        document.getElementById('add6').innerHTML = "Room Full"
+    }
 }
 
 function remove6 () {
     var getV6 = document.getElementById('people6').value;
-    document.getElementById('people6').value = "";
     var getLi6 = document.getElementsByTagName('li')[getV6 - 1];
     var parent6 = getLi6.parentNode;
     parent6.removeChild(getLi6);
+    document.getElementById('add6').disabled = false;
+    document.getElementById('add6').innerHTML = "Check In"
 }
 function removeAll6 () {
    var removeList6 = document.getElementById('ol6');
    removeList6.innerHTML = '';
+   document.getElementById('add6').disabled = false;
+   document.getElementById('add6').innerHTML = "Check In"
 
 }
 function lock6 () {
