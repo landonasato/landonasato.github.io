@@ -1,6 +1,5 @@
 .index {
-  background-image:url("../images/seattle.jpeg");
-  background-size:cover;
+  background-image:url("../images/wallpaper.jpg");
 
 }
 .index1 {
@@ -51,6 +50,17 @@
   padding: 1.0em;
   color: black;
   background-color: white;
+  width: 60%;
+  height: 50%;
+  border-radius: 9px;
+  margin-top: 30px;
+  float: none;
+
+}
+#divBook {
+  padding: 1.0em;
+  color: black;
+  background-color: white;
   clear: left;
   width: 400px;
   height: 300px;
@@ -74,12 +84,11 @@
   padding: 1.0em;
   color: black;
   background-color: white;
-  align-self: right;
-  float: right;
-  width: 400px;
-  height: 300px;
+  width: 15%;
+  min-height: 15%;
   border-radius: 10px;
   margin-top: 30px;
+  float:right;
 }
 
 #divright2 {
@@ -149,13 +158,8 @@
   position: static;
 
 }
-#notspecial {
-  -webkit-clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
-  background-color: red;
-  width: 400px;
-  height: 400px;
-  shape-outside: polygon(50% 0%, 100% 100%, 0% 100%);
-}
+
+
 #sidetext {
   margin-top: 30px;
   color: black;
@@ -164,28 +168,99 @@
   border-radius: 4px;
 
 }
-#areyousure {
-  padding: 0.5em;
+
+
+#imageformat {
+  height: 70%;
+  width: 50%;
+  float: right;
+  border:2px solid #fff;
+	background: url(img/tiger.png) no-repeat;
+	box-shadow: 10px 10px 5px #ccc;
+	-moz-box-shadow: 10px 10px 5px #ccc;
+  -webkit-box-shadow: 10px 10px 5px #ccc;
+	-khtml-box-shadow: 10px 10px 5px #ccc;
+}
+#buttonhotel {
+  background-color: #e7e7e7;
   color: black;
-  margin-top: 20px;
-  padding-top: 10px;
-  background-color: white;
-  clear: left;
-  border-radius: 10px;
+  border: 6px solid #e7e7e7;
+  transition-duration: 0.5s;
 
 }
-#arrow {
-  -webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
-  shape-outside: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
-  color: green;
-  height: 10px;
-  width: 10px;
+
+#buttonhotel:hover {background-color: white;}
+
+#add1 {
+  background-color: #e7e7e7;
+  color: black;
+  border: 6px solid #e7e7e7;
+  transition-duration: 0.5s;
+
 }
-#arrow2 {
-  -webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
-  width: 70px;
-  height: 70px;
-  background-color: green;
-  float: left;
-  shape-outside: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+
+#add1:hover {background-color: white;}
+#add2 {
+  background-color: #e7e7e7;
+  color: black;
+  border: 6px solid #e7e7e7;
+  transition-duration: 0.5s;
+
 }
+
+#add3:hover {background-color: white;}
+#add3 {
+  background-color: #e7e7e7;
+  color: black;
+  border: 6px solid #e7e7e7;
+  transition-duration: 0.5s;
+
+}
+
+#add4:hover {background-color: white;}
+#add4 {
+  background-color: #e7e7e7;
+  color: black;
+  border: 6px solid #e7e7e7;
+  transition-duration: 0.5s;
+
+}
+
+#add5:hover {background-color: white;}
+#add5 {
+  background-color: #e7e7e7;
+  color: black;
+  border: 6px solid #e7e7e7;
+  transition-duration: 0.5s;
+
+}
+
+#add6:hover {background-color: white;}
+#add6 {
+  background-color: #e7e7e7;
+  color: black;
+  border: 6px solid #e7e7e7;
+  transition-duration: 0.5s;
+
+}
+
+#add2:hover {background-color: white;}
+
+#inputHotel {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+inputHotel[type=text]:focus {
+  width: 100%;
+}
+
