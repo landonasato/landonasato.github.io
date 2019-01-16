@@ -9,7 +9,7 @@
         xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
         var mydata = JSON.parse(this.responseText);
-        window.alert(food.name);
+        window.alert(mydata.food[1].name);
         }
     };
         xmlhttp.open("GET", "food.json",true);
