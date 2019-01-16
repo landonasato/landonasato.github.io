@@ -1,0 +1,28 @@
+{
+    "food":[
+        {
+            "name":"soft shelled crab",
+            "price":32.67,
+            "kilos":2,
+            "sides":[
+                "rice",
+                "mac salad",
+                "ginger",
+                "lomi salmon"
+            ]
+        },
+        {
+            "name":"medium crab",
+            "price":32.67,
+            "kilos":2,
+            "sides":[
+                "rice",
+                "tears",
+                "shame",
+                "insanity"
+
+            ]
+        }
+    ]
+    
+}
