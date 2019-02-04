@@ -10,28 +10,15 @@
     <a id="headtext">Akiara's Diner</a>
 </header>
 <div id="divleft">
+        <p id="font">Here is what you ordered</p>
+        <ul id=ul0 class="font">
+        </ul>
 <p id="subtotaloutput"></p>
 <p id="font">Tax - 4.712%</p>
 <span id="font">Tip - </span><input type="number" placeholder="Tip in Dollars.Cents" id="tipinput"><button id="buttonformat2" onclick="tip()">Submit</button>
 <p id="finaltotaloutput"></p>
-<p id="font">Here is what you ordered</p>
-<ul id=ul0 class="font">
-</ul>
 </div>
-<script>
-    var foods = {
-    "foodlist0" : "Orange Chicken Combo",
-    "foodlist1" : "Bowl of Rice",
-    "foodlist2" : "Fried Saimin Combo",
-    "foodlist3" : "Mochiko Chicken Combo", 
-    "foodlist4" : "Soda", 
-    "foodlist5" : "Juice"
-};
-
-
-
-var foods = JSON.stringify(foods);
-var mydata = JSON.parse(foods);    
+<script>   
     var total = localStorage.getItem('deadify');
     var total2 = Number(total);
     var subtotal = total2.toFixed(2);
@@ -44,16 +31,97 @@ var mydata = JSON.parse(foods);
         document.getElementById('finaltotaloutput').innerHTML = "Your Total is $" + taxCalc.toFixed(2);
     }
 
-    var tallyGet0 = localStorage.getItem('tallyNumber0');
-    window.alert(tallyGet0);
+
+    sendTally0 = localStorage.getItem('sendTally0');
+    sendTally0 = JSON.parse(sendTally0);
+
+    sendTally1 = localStorage.getItem('sendTally1');
+    sendTally1 = JSON.parse(sendTally1);
+
+    sendTally2 = localStorage.getItem('sendTally2');
+    sendTally2 = JSON.parse(sendTally2);
+
+    sendTally3 = localStorage.getItem('sendTally3');
+    sendTally3 = JSON.parse(sendTally3);
+
+    sendTally4 = localStorage.getItem('sendTally4');
+    sendTally4 = JSON.parse(sendTally4);
+
+    sendTally5 = localStorage.getItem('sendTally5');
+    sendTally5 = JSON.parse(sendTally5);
 
 
-    var tally0 = localStorage.getItem('pushText0');
+
+
+
+
+
+
+    
+
+    console.log(sendTally0);
+    console.log(sendTally1);
+    console.log(sendTally2);
+    console.log(sendTally3);
+    console.log(sendTally4);
+    console.log(sendTally5);
+
+
     var tallyList0 = document.createElement('li');
-    var tallyText0 = document.createTextNode(tally0);
+    var tallyText0 = document.createTextNode(sendTally0);
     tallyList0.appendChild(tallyText0);
     var position0 = document.getElementById('ul0');
     position0.appendChild(tallyList0);
+
+    var tallyList1 = document.createElement('li');
+    var tallyText1 = document.createTextNode(sendTally1);
+    tallyList1.appendChild(tallyText1);
+    var position1 = document.getElementById('ul0');
+    position1.appendChild(tallyList1);
+
+    var tallyList2 = document.createElement('li');
+    var tallyText2 = document.createTextNode(sendTally2);
+    tallyList2.appendChild(tallyText2);
+    var position2 = document.getElementById('ul0');
+    position2.appendChild(tallyList2);
+
+    var tallyList3 = document.createElement('li');
+    var tallyText3 = document.createTextNode(sendTally3);
+    tallyList3.appendChild(tallyText3);
+    var position3 = document.getElementById('ul0');
+    position3.appendChild(tallyList3);
+
+    var tallyList4 = document.createElement('li');
+    var tallyText4 = document.createTextNode(sendTally4);
+    tallyList4.appendChild(tallyText4);
+    var position4 = document.getElementById('ul0');
+    position4.appendChild(tallyList4);
+
+    var tallyList5 = document.createElement('li');
+    var tallyText5 = document.createTextNode(sendTally5);
+    tallyList5.appendChild(tallyText5);
+    var position5 = document.getElementById('ul0');
+    position5.appendChild(tallyList5);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
 
     </script>
 </body>
