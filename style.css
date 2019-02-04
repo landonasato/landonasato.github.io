@@ -1,0 +1,262 @@
+.index {
+  background-image:url("kiminonawa.jpg  ");
+  background-size:cover;
+
+}
+.index1 {
+  background-image:url("../images/seattlebay.jpg");
+  background-size:cover;
+}
+.index2 {
+  background-image:url("../images/spaceneedle1.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.background {
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+#output {
+  font-family: 'Encode Sans Expanded', sans-serif;
+}
+#font {
+  font-family: 'Encode Sans Expanded', sans-serif;
+  font-size:34px;
+}
+#subtotaloutput {
+  font-family: 'Encode Sans Expanded', sans-serif;
+  font-size:34px;
+}
+#finaltotaloutput {
+  font-family: 'Encode Sans Expanded', sans-serif;
+  font-size:34px;
+}
+#header1 {
+  font-family: 'Encode Sans Expanded', sans-serif;
+  font-size: 34px;
+  text-align: center;
+  color: white;
+}
+#divindex {
+  padding: 1.0em;
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+#divleft {
+  overflow:auto;
+  padding: 1.0em;
+  color: black;
+  background-color: white;
+  min-width: 10vw;
+  max-width:50vw;
+  min-height: 10vh;
+  border-radius: 10px;
+  border-top:100px;
+  margin-top: 20px; 
+}
+#imageformat {
+  min-height: 10vh;
+  max-height: 35vh;
+  min-width: 10vw;
+  max-width: 50vw;
+  float: right;
+  border:2px solid #fff;
+	box-shadow: 10px 10px 5px #ccc;
+	-moz-box-shadow: 10px 10px 5px #ccc;
+  -webkit-box-shadow: 10px 10px 5px #ccc;
+  -khtml-box-shadow: 10px 10px 5px #ccc;
+}
+#buttonformat {
+  background-color: #e7e7e7;
+  color: black;
+  border: 6px solid #e7e7e7;
+  transition-duration: 0.5s;
+
+}
+
+#buttonformat:hover {background-color: white;}
+#buttonformat2 {
+  background-color: #e7e7e7;
+  color: black;
+  border: 6px solid #e7e7e7;
+  transition-duration: 0.5s;
+  margin-left: 1vw;
+
+
+}
+
+#buttonformat2:hover {background-color: white;}
+#divBook {
+  padding: 1.0em;
+  color: black;
+  background-color: white;
+  clear: left;
+  width: 400px;
+  height: 300px;
+  border-radius: 10px;
+  margin-top: 30px;
+
+}
+#divleft2 {
+  padding: 1.0em;
+  color: black;
+  background-color: white;
+  clear: left;
+  float: left;
+  width: 720px;
+  height: 120px;
+  border-radius: 10px;
+  margin-top: 30px;
+
+}
+#divright {
+  padding: 1.0em;
+  color: black;
+  background-color: white;
+  align-self: right;
+  float: right;
+  width: 400px;
+  height: 300px;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+#divright2 {
+  padding: 1.0em;
+  color: black;
+  background-color: white;
+  clear: left;
+  float: right;
+  width: 720px;
+  height: 120px;
+  border-radius: 10px;
+  margin-top: 30px;
+
+}
+#music {
+  padding: 1.0em;
+  color: black;
+  background-color: white;
+  font-family: 'Encode Sans Expanded', sans-serif;
+  text-align:left;
+  clear: left;
+  margin: 10px;
+  width: 1280px;
+  float: left;
+  height: 25px;
+}
+#shape1 {
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+  -shape-outside: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+  width: 400px;
+  height: 400px;
+  background-color: red;
+}
+#musictext {
+  font-family: 'Encode Sans Expanded', sans-serif;
+  text-align: center;
+  float: right;
+}
+#headtext {
+    font-family: 'Encode Sans Expanded', sans-serif;
+    text-align:left;
+}
+#headbutton {
+    font-family: 'Encode Sans Expanded', sans-serif;
+    text-align: right;
+    padding-left: 20px;
+    float: right;
+    text-decoration-color: black;
+}
+
+#headbutton {
+      font-family: 'Encode Sans Expanded', sans-serif;
+      text-align: right;
+      float: right;
+      text-decoration-color: black;
+}
+#confirmpage {
+    font-family: 'Encode Sans Expanded', sans-serif;
+    text-align: center;
+}
+#confirmpage2 {
+    font-family: 'Encode Sans Expanded', sans-serif;
+    text-align: center;
+    float: none;
+
+}
+
+#head {
+  padding: 1.0em;
+  color: black;
+  background-color: white;
+  clear: left;
+  width: auto;
+  position: static;
+
+}
+#notspecial {
+  -webkit-clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+  background-color: red;
+  width: 400px;
+  height: 400px;
+  shape-outside: polygon(50% 0%, 100% 100%, 0% 100%);
+}
+#sidetext {
+  margin-top: 30px;
+  color: black;
+  background-color: white;
+  float: left;
+  border-radius: 4px;
+
+}
+#areyousure {
+  padding: 0.5em;
+  color: black;
+  margin-top: 20px;
+  padding-top: 10px;
+  background-color: white;
+  clear: left;
+  border-radius: 10px;
+
+}
+#arrow {
+  -webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+  shape-outside: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+  color: green;
+  height: 10px;
+  width: 10px;
+}
+#arrow2 {
+  -webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+  width: 70px;
+  height: 70px;
+  background-color: green;
+  float: left;
+  shape-outside: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+}
+#kiminonawa {
+  width: 10%;
+  height: 10%;
+  background-image:url(kiminonawa.jpg)
+}
+input[type=number] {
+  min-width: 10vw;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+.font {
+  font-family: 'Encode Sans Expanded', sans-serif;
+  font-size:34px;
+}
+
+

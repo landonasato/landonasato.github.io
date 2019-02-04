@@ -1,0 +1,60 @@
+<html class="index">
+<head>
+  <title>Akiara's Diner</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+  <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded" rel="stylesheet">
+</head>
+<body>
+  <header id="head">
+    <a id="headtext">Akiara's Diner</a>
+</header>
+<div id="divleft">
+<p id="subtotaloutput"></p>
+<p id="font">Tax - 4.712%</p>
+<span id="font">Tip - </span><input type="number" placeholder="Tip in Dollars.Cents" id="tipinput"><button id="buttonformat2" onclick="tip()">Submit</button>
+<p id="finaltotaloutput"></p>
+<p id="font">Here is what you ordered</p>
+<ul id=ul0 class="font">
+</ul>
+</div>
+<script>
+    var foods = {
+    "foodlist0" : "Orange Chicken Combo",
+    "foodlist1" : "Bowl of Rice",
+    "foodlist2" : "Fried Saimin Combo",
+    "foodlist3" : "Mochiko Chicken Combo", 
+    "foodlist4" : "Soda", 
+    "foodlist5" : "Juice"
+};
+
+
+
+var foods = JSON.stringify(foods);
+var mydata = JSON.parse(foods);    
+    var total = localStorage.getItem('deadify');
+    var total2 = Number(total);
+    var subtotal = total2.toFixed(2);
+    console.log(subtotal);
+    document.getElementById("subtotaloutput").innerHTML = "Subtotal - " + "$" + subtotal;
+
+    function tip() {
+        var tipAmount = document.getElementById('tipinput').value;
+        var taxCalc = Number(subtotal) * Number(0.04712) + Number(subtotal) + Number(tipAmount);
+        document.getElementById('finaltotaloutput').innerHTML = "Your Total is $" + taxCalc.toFixed(2);
+    }
+
+    var tallyGet0 = localStorage.getItem('tallyNumber0');
+    window.alert(tallyGet0);
+
+
+    var tally0 = localStorage.getItem('pushText0');
+    var tallyList0 = document.createElement('li');
+    var tallyText0 = document.createTextNode(tally0);
+    tallyList0.appendChild(tallyText0);
+    var position0 = document.getElementById('ul0');
+    position0.appendChild(tallyList0);
+
+    </script>
+</body>
+</html>

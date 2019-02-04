@@ -1,0 +1,16 @@
+
+    var food = {
+        {"item" : "Orange Chicken", "cost" : 10.99},
+
+        {"item1" : "Bowl of Rice", "cost1" : 1.99},
+        
+        {"item2" : "Water", "cost2" : 0.99},
+
+        {"item3" : "Cake Noodle", "cost3" : 5.00},
+
+        {"item4" : "Fried Rice", "cost4" : 2.99},
+
+        {"item5" : "Juice", "cost5" : 1.99},
+        
+        {"tax" : 0.04712}
+    };
