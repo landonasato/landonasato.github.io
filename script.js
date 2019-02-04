@@ -10,7 +10,7 @@ var foods = {
     "cost2" : 5.99,
 
     "foodlist3" : "Mochiko Chicken Combo", 
-    "cost3" : 10.00,
+    "cost3" : 10.99,
 
     "foodlist4" : "Soda", 
     "cost4" : 1.99,
@@ -31,12 +31,12 @@ document.getElementById('foodName2').innerHTML = mydata.foodlist2;
 document.getElementById('foodName3').innerHTML = mydata.foodlist3;
 document.getElementById('foodName4').innerHTML = mydata.foodlist4;
 document.getElementById('foodName5').innerHTML = mydata.foodlist5;
-document.getElementById('foodPrice0').innerHTML = mydata.cost0;
-document.getElementById('foodPrice1').innerHTML = mydata.cost1;
-document.getElementById('foodPrice2').innerHTML = mydata.cost2;
-document.getElementById('foodPrice3').innerHTML = mydata.cost3;
-document.getElementById('foodPrice4').innerHTML = mydata.cost4;
-document.getElementById('foodPrice5').innerHTML = mydata.cost5;
+document.getElementById('foodPrice0').innerHTML = "$" + mydata.cost0;
+document.getElementById('foodPrice1').innerHTML = "$" + mydata.cost1;
+document.getElementById('foodPrice2').innerHTML = "$" + mydata.cost2;
+document.getElementById('foodPrice3').innerHTML = "$" + mydata.cost3;
+document.getElementById('foodPrice4').innerHTML = "$" + mydata.cost4;
+document.getElementById('foodPrice5').innerHTML = "$" + mydata.cost5;
 
 
 
