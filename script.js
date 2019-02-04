@@ -1,9 +1,3 @@
-var tally0 = [];
-var tally1 = [];
-var tally2 = [];
-var tally3= [];
-var tally4 = [];
-var tally5 = [];
 var deadify = [];
 var foods = {
     "foodlist0" : "Orange Chicken Combo",

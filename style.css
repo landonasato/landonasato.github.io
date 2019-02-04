@@ -1,6 +1,7 @@
 .index {
-  background-image:url("kiminonawa.jpg  ");
+  background-image:url("restaurant.jpg");
   background-size:cover;
+  background-attachment: fixed;
 
 }
 .index1 {
