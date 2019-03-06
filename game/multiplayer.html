@@ -1,0 +1,122 @@
+<html>
+  <head>
+    <script src="p5.min.js"></script>
+    <style>
+      body{
+        overflow:hidden;
+        margin:0;
+        padding:0;
+        font-size: 100px;
+        font-family: "Courier New", Courier, monospace;
+        text-align: center;
+      }
+      
+    </style>
+  </head>
+  <body>
+      <audio src="music.mp3" autoplay loop></audio>
+    <script>
+    var w = window.innerWidth;
+    var h = window.innerHeight;
+    var player1 = new player1();//creating a new object globally
+    var spd1 = 10;
+    var player2 = new player2();
+    var spd2 = 10;
+    var d; //distance
+    var powerup1 = new powerup1();
+    function setup() {
+      createCanvas(w,h);
+      img = loadImage('grimreaper.png');
+      bg = loadImage('background.jpg');
+    }
+    function draw() {
+      background(bg);
+      player1.show();
+      player1.move();
+      player2.move();
+      player2.show();
+      player2.kill();
+      strokeWeight(0);
+      
+    }
+    function player1() {
+      this.x = 100;
+      this.y = 100;
+      this.show=function() {
+        //fill(color('#ff80bf'));
+        image(img,this.x-100,this.y-100,200,200);
+        ellipse(this.x,this.y,100,100);
+      }
+      this.move = function() {
+        if ((keyIsDown(68)) && (this.x<w-50)) {
+          //d
+          this.x+=spd1;
+        }
+        if ((keyIsDown(65)) && (this.x>50)) {
+          //a
+          this.x-=spd1;
+        }
+        if ((keyIsDown(87)) && (this.y>50)){
+          //w
+          this.y-=spd1;
+        }
+        if ((keyIsDown(83)) && (this.y<h-50)){
+          //s
+          this.y+=spd1;
+        }
+        if ((keyIsDown(16)) && (spd1 < 21)) {
+          //shift
+          spd1+=10;
+          console.log(spd1);
+        }
+        if ((keyIsDown(16) == false) && (spd1=21)) {
+          spd1-=10;
+          console.log(spd1, this.x, this.y);
+        }
+      }
+    }
+    function player2(){
+      this.x = w-150;
+      this.y = h-150;
+      this.show=function(){
+      fill(color('#66ffb3'));
+        ellipse(this.x,this.y,100,100);
+      }
+      this.move=function() {
+        if((keyIsDown(76)) && (this.x<w-50)){
+          //l
+          this.x+=spd2;
+        }
+        if((keyIsDown(74)) && (this.x>50)){
+          //j
+          this.x-=spd2;
+        }
+        if((keyIsDown(73)) && (this.y>50)){
+          //i
+          this.y-=spd2;
+        }
+        if((keyIsDown(75)) && (this.y<h-50)){
+          //k
+          this.y+=spd2;
+          }
+        if ((keyIsDown(191)) && (spd2 < 21)) {
+          //shift
+          spd2+=10;
+        }
+        if ((keyIsDown(191) == false) && (spd2=21)) {
+          spd2-=10;
+        }
+        
+      }
+      this.kill=function() {
+        d = dist(this.x,this.y,player1.x,player1.y);//distance function
+        if(d<80){
+          noLoop(); //stops draw function
+          var lost = document.body.innerHTML = "You Lost";
+        }
+      }
+    }
+    
+    </script>
+  </body>
+</html>

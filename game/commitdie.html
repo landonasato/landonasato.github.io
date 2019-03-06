@@ -1,0 +1,105 @@
+<html>
+  <head>
+    <script src="p5.min.js"></script>
+    <style>
+      body{
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        font-size: 100px;
+
+      }
+    </style>
+  </head>
+  <body>
+      <audio src="" autoplay loop>
+        </audio>
+    <script>
+    var w = window.innerWidth;
+    var h = window.innerHeight;
+    var player1 = new player1();
+    var player2 = new player2();
+    var d;
+    var distSpeed;
+    function setup() {
+      createCanvas(w,h);
+    }
+    function draw(){
+      background(255);
+      player1.show();
+      player1.move();
+      player2.move(this.x = this.speed);
+      player2.show();
+      player2.kill();
+    }
+    function player1() {
+      this.x=100;
+      this.y=100;
+      this.speed=1;
+      this.show=function() {
+        fill(color('red'));
+        strokeWeight(0);
+        ellipse(this.x,this.y,100,100);
+      }
+      this.move = function() {
+        if((keyIsDown(68)) && (this.x<w-50)) {
+          //right arrow
+          this.x += 10;
+        }
+        if((keyIsDown(65)) && (this.x>50) ){
+          //left arrow
+          this.x -= 10;
+        }
+        if((keyIsDown(87)) && (this.y>50)){
+          //up arrow
+          this.y -= 10;
+        }
+        if((keyIsDown(83))&&(this.y<h-50)){
+          //down arrow
+          this.y+=10;
+        }
+      }
+    }
+    function player2(){
+      this.x=w-150;
+      this.y=h-150;
+      this.show=function(){
+        fill(color('blue'));
+        strokeWeight(0);
+        ellipse(this.x,this.y,100,100);
+      }
+      this.move=function(){
+        if((keyIsDown(76))&&(this.x<w-50)){
+          //l
+          this.x+=10;
+        }
+        if((keyIsDown(74))&&(this.x>50)){
+          //j
+          this.x-=10;
+        }
+        if((keyIsDown(73))&&(this.y>50)){
+          //i
+          this.y-=10;
+        }
+        if((keyIsDown(75))&&(this.y<h-50)){
+          //k
+          this.y+=10;
+        }
+        if(keyIsDown(77)) {
+          this.speed = 10; //Attempting to create game with speed controls
+        }
+      
+        console.log(this.x, this.y, this.speed);
+      }
+      this.kill = function() {
+        d = dist(this.x, this.y, player1.x, player1.y);
+        if (d < 50) {
+          noLoop();
+          var lost = document.body.innerHTML = "You Lost";
+          lost = document.body.style()
+        }
+      }
+    }
+    </script>
+  </body>
+</html>
