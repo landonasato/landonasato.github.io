@@ -23,7 +23,6 @@
     var player2 = new player2();
     var spd2 = 10;
     var d; //distance
-    var powerup1 = new powerup1();
     function setup() {
       createCanvas(w,h);
       img = loadImage('grimreaper.png');
@@ -43,7 +42,7 @@
       this.x = 100;
       this.y = 100;
       this.show=function() {
-        //fill(color('#ff80bf'));
+        fill(color('255,128,191,0'));
         image(img,this.x-100,this.y-100,200,200);
         ellipse(this.x,this.y,100,100);
       }
