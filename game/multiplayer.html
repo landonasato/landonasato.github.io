@@ -9,12 +9,13 @@
         font-size: 100px;
         font-family: "Courier New", Courier, monospace;
         text-align: center;
+        background-image: url("background.jpg");
       }
       
     </style>
   </head>
   <body>
-      <audio src="music.mp3" autoplay loop></audio>
+      <span id="timerDisplay">30 seconds remaining</span><audio src="music.mp3" autoplay loop></audio>
     <script>
     var w = window.innerWidth;
     var h = window.innerHeight;
@@ -23,6 +24,23 @@
     var player2 = new player2();
     var spd2 = 10;
     var d; //distance
+    setTimeout(function(){
+          var endGame = document.body.innerHTML = "You ran out of time";
+        }, 30000);
+        var timeLeft = 29;
+        var elem = document.getElementById('timerDisplay');
+    
+        var timerId = setInterval(countdown, 1000);
+    
+        function countdown() {
+        if (timeLeft == 0) {
+        clearTimeout(timerId);
+        doSomething();
+        } else {
+        elem.innerHTML = timeLeft + ' seconds remaining';
+        timeLeft--;
+      }
+    }
     function setup() {
       createCanvas(w,h);
       img = loadImage('grimreaper.png');
@@ -112,11 +130,10 @@
         d = dist(this.x,this.y,player1.x,player1.y);//distance function
         if(d<80){
           noLoop(); //stops draw function
-          var lost = document.body.innerHTML = "You Lost";
+          var scoreTally = Number(30) - Number(timeLeft);
+          var lost = document.body.innerHTML = "You lasted " + scoreTally + " seconds.";
+
         }
-        setTimeout(function(){
-          var endGame = document.body.innerHTML = "You ran out of time";
-        }, 3000);
       }
     }
     
