@@ -108,11 +108,15 @@
         
       }
       this.kill=function() {
+        
         d = dist(this.x,this.y,player1.x,player1.y);//distance function
         if(d<80){
           noLoop(); //stops draw function
           var lost = document.body.innerHTML = "You Lost";
         }
+        setTimeout(function(){
+          var endGame = document.body.innerHTML = "You ran out of time";
+        }, 3000);
       }
     }
     
