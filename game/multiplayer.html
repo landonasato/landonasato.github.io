@@ -16,8 +16,9 @@
     </style>
   </head>
   <body>
-      <span id="timerDisplay">30 seconds remaining</span><audio src="music.mp4" autoplay loop volume="0.5"></audio>
+      <span id="timerDisplay">30 seconds remaining</span><audio src="music.mp4" autoplay loop volume="0.5" id="music"></audio>
     <script>
+      document.getElementById('music').play; 
     var w = window.innerWidth;
     var h = window.innerHeight;
     var player1 = new player1();//creating a new object globally
