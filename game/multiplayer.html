@@ -61,7 +61,8 @@
       this.x = 100;
       this.y = 100;
       this.show=function() {
-        fill(color('255,128,191,0'));
+        //fill(color('255,128,191,0'));
+        noFill();
         image(img,this.x-100,this.y-100,200,200);
         ellipse(this.x,this.y,100,100);
       }
@@ -97,7 +98,8 @@
       this.x = w-150;
       this.y = h-150;
       this.show=function(){
-      fill(color('#66ffb3'));
+      nofill();
+      //fill(color('#66ffb3'));
         ellipse(this.x,this.y,100,100);
       }
       this.move=function() {
