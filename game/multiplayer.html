@@ -16,7 +16,7 @@
     </style>
   </head>
   <body>
-      <span id="timerDisplay">30 seconds remaining</span><audio src="music.mp4" autoplay loop volume="0.5" id="music"></audio>
+      <span id="timerDisplay">30 seconds remaining</span><audio src="music.mp4" autoplay loop volume="0.1" id="music" controls></audio>
     <script>
       document.getElementById('music').play; 
     var w = window.innerWidth;
@@ -105,7 +105,7 @@
       //fill(color('#66ffb3'));
         ellipse(this.x,this.y,100,100);
       }
-      this.move=function() {
+      this.move=function() { 
         if((keyIsDown(76)) && (this.x<w-50)){
           //l
           this.x+=spd2;
@@ -121,7 +121,7 @@
         if((keyIsDown(75)) && (this.y<h-50)){
           //k
           this.y+=spd2;
-          }
+        } 
         if ((keyIsDown(191)) && (spd2 < 21)) {
           //shift
           spd2+=10;
@@ -138,6 +138,7 @@
           noLoop(); //stops draw function
           var scoreTally = Number(30) - Number(timeLeft);
           var lost = document.body.innerHTML = "You lasted " + scoreTally + " seconds.";
+          console.log(this.kill);
 
         }
       }
