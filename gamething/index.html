@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <script src="p5.min.js"></script>
+        <style>
+        body {
+            overflow: hidden;
+            margin-top: 0%;
+            margin-left: 0%;
+        }
+        </style>
+    </head>
+    <body>
+        <script>
+    var w = window.innerWidth;
+    var h = window.innerHeight;
+    function setup() {
+        createCanvas(w,h);
+           } 
+    function draw() {
+        background(0);
+        jumper.show();
+        jumper.update();
+    }
+    function jumper() {
+        this.x = 50;
+        this.y = 0;
+        this.gravity = 0.5; //The force of air pushing down on the thing
+        this.lift = -10;
+        this.velocity = 0;
+
+        this.show = function () {
+        fill(color(255));
+        ellipse(this.x,this.y,50,50);
+        }
+
+        this.up = function() {
+            this.velocity += this.lift; //Jumping function
+        }
+
+        this.update = function() {
+            this.velocity += this.gravity; //Gravity applied when not jumping
+            this.y += this.velocity;
+            this.velocity *= 0.8; //Air resistance
+            if (this.y > h) { //jumper hits the floor
+                this.y = h;
+                this.velocity = 0;
+            }
+            if (this.y < 0) { //Jumper hits the ceiling
+            this.y = 0; 
+            this.velocity = 0;
+            }
+        }
+    } //Thingamajig ends here
+    function keyPressed() {
+        if (keyCode === 32) {
+            jumper.up();
+        }
+    }
+
+        </script>
+    </body>
+</html>                                                                                                                     
