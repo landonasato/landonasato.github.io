@@ -3,14 +3,29 @@ var h = window.innerHeight;
 var jumper = new jumper();
 var barrier = new barrier();
 var hit = false;
+
+setTimeout(function(){
+  var endGame = document.body.innerHTML = "You ran out of time";
+}, 30000);
+var timeLeft = 29;
+var elem = document.getElementById('timerDisplay');
+
+var timerId = setInterval(countdown, 1000);
+function countdown() {
+if (timeLeft == 0) {
+clearTimeout(timerId);
+doSomething();
+} else {
+elem.innerHTML = timeLeft + ' seconds remaining';
+timeLeft--;
+  } 
+}
+
   function setup(){
     createCanvas(w,h);
-    frog = loadImage('herecomedatboi.png');
-    stab = loadImage('stabdatboi.png');
-
+    img = loadImage('herecomedatboi.');
   }
   function draw() {
-    background(color('purple'));
     jumper.show();
     jumper.update();
     jumper.move();
@@ -26,8 +41,7 @@ var hit = false;
     this.lift = -10;
     this.velocity = 0;
     this.show=function(){
-      //fill(color('red'));
-      image(stab,this.x-100,this.y-100,200,100);
+      fill(color('red'));
       rect(this.x,this.y,50,50);
       strokeWeight(0);
       
@@ -60,9 +74,7 @@ var hit = false;
     this.gravity = 10;
     this.wall = Math.floor(Math.random()*h-50);
     this.show=function(){
-      //fill(color('white'));
-      image(frog,this.x-100,this.y-100,200,this.wall);
-      noFill();
+      fill(color('white'));
       rect(this.x,this.y,100,this.wall);
     }
     this.grav=function() {
