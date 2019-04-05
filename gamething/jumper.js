@@ -37,7 +37,7 @@ timeLeft--;
   function jumper() {
     this.x = 50;
     this.y = 0;
-    this.gravity = 0.5;
+    this.gravity = 2;
     this.lift = -10;
     this.velocity = 0;
     this.show=function(){

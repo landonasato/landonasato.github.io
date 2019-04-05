@@ -7,10 +7,11 @@ var hit = false;
     createCanvas(w,h);
     frog = loadImage('herecomedatboi.png');
     stab = loadImage('stabdatboi.png');
-
+    bg = loadImage('background.png');
   }
   function draw() {
-    background(color('purple'));
+    //background(color('purple'));
+    background(bg);
     jumper.show();
     jumper.update();
     jumper.move();
