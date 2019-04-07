@@ -31,7 +31,6 @@ var hit = false;
       image(stab,this.x-100,this.y-100,200,100);
       rect(this.x,this.y,50,50);
       strokeWeight(0);
-      
       this.move = function () {
         if(keyIsDown(68)) {
             this.x += 10;
