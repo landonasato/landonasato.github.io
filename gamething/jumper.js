@@ -23,7 +23,7 @@ timeLeft--;
 
   function setup(){
     createCanvas(w,h);
-    img = loadImage('herecomedatboi.');
+    img = loadImage('herecomedatboi.png');
   }
   function draw() {
     jumper.show();
