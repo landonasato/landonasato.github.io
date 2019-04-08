@@ -55,8 +55,8 @@ var hit = false;
     }
   }
   function barrier() {
-    this.x = w + 100;
-    this.y = 100;
+    this.x = w + 100 ;
+    this.y = 900;
     this.gravity = 10;
     this.wall = Math.floor(Math.random()*h-50);
     this.show=function(){
