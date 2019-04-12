@@ -7,8 +7,8 @@ document.getElementById('music').play;
 
   function setup(){
     createCanvas(w,h);
-    frog = loadImage('herecomedatboi.png');
-    stab = loadImage('stabdatboi.png');
+    frog = loadImage('oak.png');
+    stab = loadImage('axeofsorts.png');
     bg = loadImage('background.png');
   }
   function draw() {
@@ -59,9 +59,8 @@ document.getElementById('music').play;
   }
   function barrier() {
     this.x = w + 100 ;
-    this.gravity = 10;
+    this.gravity = Math.floor(Math.random()*20) + 10;
     this.wall = Math.floor(Math.random()*h-50);
-    this.y = 100;
     this.show=function(){
       //fill(color('white'));
       image(frog,this.x-100,this.y-100,200,this.wall);
@@ -71,6 +70,7 @@ document.getElementById('music').play;
     this.grav=function() {
       this.x-=this.gravity;
       if(this.x<-100){
+        this.y = Math.floor(Math.random()*h);
         this.x=w+100;
         this.wall=Math.floor(Math.random()*h-100);
       }
@@ -86,6 +86,7 @@ document.getElementById('music').play;
       }
     
   }
+  
   function keyPressed(){
     if(keyCode===32){
       jumper.up();
