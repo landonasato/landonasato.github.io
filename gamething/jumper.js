@@ -23,7 +23,7 @@ timeLeft--;
 
   function setup(){
     createCanvas(w,h);
-    img = loadImage('herecomedatboi.png');
+    img = loadImage('fire.gif');
   }
   function draw() {
     jumper.show();
@@ -40,7 +40,7 @@ timeLeft--;
     this.gravity = 2;
     this.lift = -10;
     this.velocity = 0;
-    this.show=function(){
+    this.show = function() {
       fill(color('red'));
       rect(this.x,this.y,50,50);
       strokeWeight(0);
@@ -61,7 +61,7 @@ timeLeft--;
     this.update=function() {
       this.velocity += this.gravity;
       this.y += this.velocity;
-      this.velocity * 0.8; 
+      this.velocity * 0.5; 
       if(this.y > h) {
         this.y = h;
         this.velocity = 0;

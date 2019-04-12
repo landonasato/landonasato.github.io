@@ -3,6 +3,8 @@ var h = window.innerHeight;
 var jumper = new jumper();
 var barrier = new barrier();
 var hit = false;
+document.getElementById('music').play; 
+
   function setup(){
     createCanvas(w,h);
     frog = loadImage('herecomedatboi.png');
@@ -19,6 +21,7 @@ var hit = false;
     barrier.grav();
     hit = collideRectRect(barrier.x,barrier.y,50,barrier.wall,jumper.x,jumper.y,50,75);
     print(hit);
+    var yeet = Math.floor(Math.random()*100);
     }
   function jumper() {
     this.x = 50;
@@ -56,9 +59,9 @@ var hit = false;
   }
   function barrier() {
     this.x = w + 100 ;
-    this.y = 900;
     this.gravity = 10;
     this.wall = Math.floor(Math.random()*h-50);
+    this.y = 100;
     this.show=function(){
       //fill(color('white'));
       image(frog,this.x-100,this.y-100,200,this.wall);
