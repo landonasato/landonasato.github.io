@@ -27,7 +27,7 @@ timeLeft--;
   }
   function draw() {
     jumper.show();
-    jumper.update();
+    jumper.update(); 
     jumper.move();
     barrier.show();
     barrier.grav();

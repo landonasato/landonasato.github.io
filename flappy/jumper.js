@@ -3,6 +3,7 @@ var h = window.innerHeight;
 var jumper = new jumper();
 var barrier = new barrier();
 var hit = false;
+var score = 0;
 document.getElementById('music').play; 
 
   function setup(){
@@ -10,6 +11,7 @@ document.getElementById('music').play;
     frog = loadImage('oak.png');
     stab = loadImage('axeofsorts.png');
     bg = loadImage('background.png');
+    
   }
   function draw() {
     //background(color('purple'));
@@ -22,6 +24,7 @@ document.getElementById('music').play;
     hit = collideRectRect(barrier.x,barrier.y,50,barrier.wall,jumper.x,jumper.y,50,75);
     print(hit);
     var yeet = Math.floor(Math.random()*100);
+    
     }
   function jumper() {
     this.x = 50;
@@ -70,19 +73,17 @@ document.getElementById('music').play;
     this.grav=function() {
       this.x-=this.gravity;
       if(this.x<-100){
+        
+          score +=0.1;
+          console.log(score);
         this.y = Math.floor(Math.random()*h);
         this.x=w+100;
         this.wall=Math.floor(Math.random()*h-100);
       }
+      
     }
     this.kill=function() {
         
-        if(hit == true){
-          noLoop(); //stops draw function
-          var scoreTally = Number(30) - Number(timeLeft);
-          var lost = document.body.innerHTML = "You lasted " + scoreTally + " seconds.";
-
-        }
       }
     
   }
