@@ -1,3 +1,7 @@
+
+
+
+
 var w = window.innerWidth;
 var h = window.innerHeight;
 var jumper = new jumper();
@@ -73,7 +77,6 @@ document.getElementById('music').play;
     this.grav=function() {
       this.x-=this.gravity;
       if(this.x<-100){
-        
           score +=0.1;
           console.log(score);
         this.y = Math.floor(Math.random()*h);
