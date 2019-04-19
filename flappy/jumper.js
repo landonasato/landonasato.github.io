@@ -7,13 +7,12 @@ var h = window.innerHeight;
 var jumper = new jumper();
 var barrier = new barrier();
 var hit = false;
-var score = 0;
-document.getElementById('music').play; 
+var score = -1;
 
   function setup(){
     createCanvas(w,h);
-    frog = loadImage('oak.png');
-    stab = loadImage('axeofsorts.png');
+    frog = loadImage('redstone.png');
+    stab = loadImage('tnt.png');
     bg = loadImage('background.png');
     
   }
@@ -25,10 +24,12 @@ document.getElementById('music').play;
     jumper.move();
     barrier.show();
     barrier.grav();
+    var yeet = Math.floor(Math.random()*100);
     hit = collideRectRect(barrier.x,barrier.y,50,barrier.wall,jumper.x,jumper.y,50,75);
     print(hit);
-    var yeet = Math.floor(Math.random()*100);
-    
+    if (hit === true){
+      console.log('yeet');
+    }
     }
   function jumper() {
     this.x = 50;
@@ -65,9 +66,9 @@ document.getElementById('music').play;
     }
   }
   function barrier() {
-    this.x = w + 100 ;
     this.gravity = Math.floor(Math.random()*20) + 10;
-    this.wall = Math.floor(Math.random()*h-50);
+    this.x = w + 100 ;
+    this.wall = Math.floor(Math.random()*h-200);
     this.show=function(){
       //fill(color('white'));
       image(frog,this.x-100,this.y-100,200,this.wall);
@@ -77,16 +78,21 @@ document.getElementById('music').play;
     this.grav=function() {
       this.x-=this.gravity;
       if(this.x<-100){
-          score +=0.1;
+          this.gravity = Math.floor(Math.random()*30 - 10) + 10;
+          score +=1;
           console.log(score);
         this.y = Math.floor(Math.random()*h);
         this.x=w+100;
         this.wall=Math.floor(Math.random()*h-100);
+        
       }
       
     }
     this.kill=function() {
-        
+      if(hit === true){
+console.log('ded');
+
+      }
       }
     
   }
@@ -94,6 +100,9 @@ document.getElementById('music').play;
   function keyPressed(){
     if(keyCode===32){
       jumper.up();
+    }
+    if(keyCode===16){
+      jumper.y=0;
     }
   }
   
