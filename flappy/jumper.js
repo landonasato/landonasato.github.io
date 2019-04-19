@@ -7,9 +7,9 @@ var score = 0;
 
   function setup(){
     createCanvas(w,h);
-    frog = loadImage('redstone.png');
-    stab = loadImage('tnt.png');
-    bg = loadImage('background.png');
+    frog = loadImage('tnt.png');
+    stab = loadImage('redstone.png');
+    bg = loadImage('minecraft.jpg');
     
   }
   function draw() {
@@ -39,7 +39,7 @@ var score = 0;
     this.velocity = 0;
     this.show=function(){
       //fill(color('red'));
-      image(stab,this.x-100,this.y-100,200,200);
+      image(stab,this.x-100,this.y-100,50,50);
       rect(this.x,this.y,50,50);
       strokeWeight(0);
       this.move = function () {
@@ -57,6 +57,7 @@ var score = 0;
     }
     }
     this.up = function() {
+      this.velocity += 0;
       this.velocity += this.lift;
     }
     this.update=function() {
