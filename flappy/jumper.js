@@ -1,13 +1,9 @@
-
-
-
-
 var w = window.innerWidth;
 var h = window.innerHeight;
 var jumper = new jumper();
 var barrier = new barrier();
 var hit = false;
-var score = -1;
+var score = 0;
 
   function setup(){
     createCanvas(w,h);
@@ -28,7 +24,11 @@ var score = -1;
     hit = collideRectRect(barrier.x,barrier.y,50,barrier.wall,jumper.x,jumper.y,50,75);
     print(hit);
     if (hit === true){
-      console.log('yeet');
+      noLoop();
+      var diefam = document.getElementById('tntsound');
+      diefam.play();
+      var somethingmusical = document.getElementById('music');
+      somethingmusical.pause();
     }
     }
   function jumper() {
@@ -39,7 +39,7 @@ var score = -1;
     this.velocity = 0;
     this.show=function(){
       //fill(color('red'));
-      image(stab,this.x-100,this.y-100,200,100);
+      image(stab,this.x-100,this.y-100,200,200);
       rect(this.x,this.y,50,50);
       strokeWeight(0);
       this.move = function () {
@@ -67,6 +67,10 @@ var score = -1;
         this.y = h;
         this.velocity = 0;
       }
+      if(this.y < 0) {
+        this.y = 0;
+        this.velocity = 0;
+      }
     }
   }
   function barrier() {
@@ -83,6 +87,7 @@ var score = -1;
       this.x-=this.gravity;
       if(this.x<-100){
           this.gravity = Math.floor(Math.random()*30 - 10) + 10;
+          document.getElementById("score").innerHTML = "Score: " + score;
           score +=1;
           console.log(score);
         this.y = Math.floor(Math.random()*h);
@@ -93,20 +98,21 @@ var score = -1;
       
     }
     this.kill=function() {
-      if(hit === true){
-console.log('ded');
-
-      }
       }
     
   }
   
   function keyPressed(){
-    if(keyCode===32 && this.y<h-50){
+    //if(keyCode===32 && this.y<h-50){
+      //jumper.up();
+    //}
+    if(keyCode===32) {
       jumper.up();
     }
     if(keyCode===16){
       jumper.y=0;
     }
+    if(keyCode===82){
+      location.href="game.html";
+    }
   }
-  

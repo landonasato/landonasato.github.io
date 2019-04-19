@@ -12,11 +12,22 @@
         font-family: "Courier New", Courier, monospace;
         text-align: center;
       }
+      #score {
+        position: absolute;
+        float: right;
+        z-index:1;
+        font-size: 20px;
+      }
     </style>
+    <audio id="tntsound">
+      <source src="tnt.mp3" type="audio/mpeg">
+    </audio>
   </head>
   <body>
+    <h1 id="score" placeholder="Score - 0"></h1>
     <!--<span id="timerDisplay">30 seconds remaining</span>-->
-    <script src="jumper.js"></script>
+    <script src="jumper.js">
+    </script>
     <!--<script src="boxes.js"></script>-->
     <audio id="music" src="yeet.mp3" autoplay  loop></audio>
   </body>
