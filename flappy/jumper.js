@@ -32,7 +32,7 @@ var score = -1;
     }
     }
   function jumper() {
-    this.x = 50;
+    this.x = 100;
     this.y = 0;
     this.gravity = 0.5;
     this.lift = -10;
@@ -43,13 +43,17 @@ var score = -1;
       rect(this.x,this.y,50,50);
       strokeWeight(0);
       this.move = function () {
-        if(keyIsDown(68)) {
-            this.x += 10;
-          }
-          if(keyIsDown(65)){
-            //left arrow
-            this.x -= 10;
-          }
+        if ((keyIsDown(65)) && (this.x>50)) {
+            //a
+            this.x-= 10;
+        }
+        if ((keyIsDown(68)) && (this.x<w-50)) {
+          //d
+          this.x+= 10;
+        }
+
+  
+  
     }
     }
     this.up = function() {
@@ -98,7 +102,7 @@ console.log('ded');
   }
   
   function keyPressed(){
-    if(keyCode===32){
+    if(keyCode===32 && this.y<h-50){
       jumper.up();
     }
     if(keyCode===16){
