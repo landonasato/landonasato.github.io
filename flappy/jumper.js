@@ -43,11 +43,11 @@ var score = 0;
       rect(this.x,this.y,50,50);
       strokeWeight(0);
       this.move = function () {
-        if ((keyIsDown(65)) && (this.x>50)) {
+        if ((keyIsDown(65)) && (this.x>60)) {
             //a
             this.x-= 10;
         }
-        if ((keyIsDown(68)) && (this.x<w-50)) {
+        if ((keyIsDown(68)) && (this.x<w)) {
           //d
           this.x+= 10;
         }
