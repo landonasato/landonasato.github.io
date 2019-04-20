@@ -1,0 +1,268 @@
+.index {
+  background-image:url("../images/wallpaper.jpg");
+
+}
+.index1 {
+  background-image:url("../images/seattlebay.jpg");
+  background-size:cover;
+}
+.index2 {
+  background-image:url("../images/spaceneedle1.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.background {
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+#parallax {
+    background-image: url('seattle.jpeg');
+    height: 50%;
+    width: 50%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#font {
+  font-family: 'Encode Sans Expanded', sans-serif;
+}
+#header1 {
+  font-family: 'Encode Sans Expanded', sans-serif;
+  font-size: 34px;
+  text-align: center;
+  color: white;
+}
+#divindex {
+  padding: 1.0em;
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+#divleft {
+  padding: 1.0em;
+  color: black;
+  background-color: white;
+  width: 60%;
+  height: 50%;
+  border-radius: 9px;
+  margin-top: 30px;
+  float: none;
+
+}
+#divBook {
+  padding: 1.0em;
+  color: black;
+  background-color: white;
+  clear: left;
+  width: 400px;
+  height: 300px;
+  border-radius: 10px;
+  margin-top: 30px;
+
+}
+#divleft2 {
+  padding: 1.0em;
+  color: black;
+  background-color: white;
+  clear: left;
+  float: left;
+  width: 720px;
+  height: 120px;
+  border-radius: 10px;
+  margin-top: 30px;
+
+}
+#divright {
+  padding: 1.0em;
+  color: black;
+  background-color: white;
+  width: 15%;
+  min-height: 15%;
+  border-radius: 10px;
+  margin-top: 30px;
+  float:right;
+  position: relative;
+
+}
+
+#divright2 {
+  padding: 1.0em;
+  color: black;
+  background-color: white;
+  clear: left;
+  float: right;
+  width: 720px;
+  height: 120px;
+  border-radius: 10px;
+  margin-top: 30px;
+
+}
+#music {
+  padding: 1.0em;
+  color: black;
+  background-color: white;
+  font-family: 'Encode Sans Expanded', sans-serif;
+  text-align:left;
+  clear: left;
+  margin: 10px;
+  width: 1280px;
+  float: left;
+  height: 25px;
+}
+#shape1 {
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+  -shape-outside: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+  width: 400px;
+  height: 400px;
+  background-color: red;
+}
+#musictext {
+  font-family: 'Encode Sans Expanded', sans-serif;
+  text-align: center;
+  float: right;
+}
+#headtext {
+    font-family: 'Encode Sans Expanded', sans-serif;
+    text-align:left;
+}
+#headbutton {
+    font-family: 'Encode Sans Expanded', sans-serif;
+    text-align: right;
+    padding-left: 20px;
+    float: right;
+    text-decoration-color: black;
+}
+#confirmpage {
+    font-family: 'Encode Sans Expanded', sans-serif;
+    text-align: center;
+}
+#confirmpage2 {
+    font-family: 'Encode Sans Expanded', sans-serif;
+    text-align: center;
+    float: none;
+
+}
+
+#head {
+  padding: 1.0em;
+  color: black;
+  background-color: white;
+  clear: left;
+  width: auto;
+  position: static;
+
+}
+
+
+#sidetext {
+  margin-top: 30px;
+  color: black;
+  background-color: white;
+  float: left;
+  border-radius: 4px;
+
+}
+
+
+#imageformat {
+  height: 70%;
+  width: 50%;
+  float: right;
+  border:2px solid #fff;
+	background: url(img/tiger.png) no-repeat;
+	box-shadow: 10px 10px 5px #ccc;
+	-moz-box-shadow: 10px 10px 5px #ccc;
+  -webkit-box-shadow: 10px 10px 5px #ccc;
+	-khtml-box-shadow: 10px 10px 5px #ccc;
+}
+#buttonhotel {
+  background-color: #e7e7e7;
+  color: black;
+  border: 6px solid #e7e7e7;
+  transition-duration: 0.5s;
+
+}
+
+#buttonhotel:hover {background-color: white;}
+
+#add1 {
+  background-color: #e7e7e7;
+  color: black;
+  border: 6px solid #e7e7e7;
+  transition-duration: 0.5s;
+
+}
+
+#add1:hover {background-color: white;}
+#add2 {
+  background-color: #e7e7e7;
+  color: black;
+  border: 6px solid #e7e7e7;
+  transition-duration: 0.5s;
+
+}
+
+#add3:hover {background-color: white;}
+#add3 {
+  background-color: #e7e7e7;
+  color: black;
+  border: 6px solid #e7e7e7;
+  transition-duration: 0.5s;
+
+}
+
+#add4:hover {background-color: white;}
+#add4 {
+  background-color: #e7e7e7;
+  color: black;
+  border: 6px solid #e7e7e7;
+  transition-duration: 0.5s;
+
+}
+
+#add5:hover {background-color: white;}
+#add5 {
+  background-color: #e7e7e7;
+  color: black;
+  border: 6px solid #e7e7e7;
+  transition-duration: 0.5s;
+
+}
+
+#add6:hover {background-color: white;}
+#add6 {
+  background-color: #e7e7e7;
+  color: black;
+  border: 6px solid #e7e7e7;
+  transition-duration: 0.5s;
+
+}
+
+#add2:hover {background-color: white;}
+
+#inputHotel {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+inputHotel[type=text]:focus {
+  width: 100%;
+}
+
