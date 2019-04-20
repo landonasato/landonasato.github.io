@@ -126,6 +126,6 @@ let mcbg;
       jumper.y=0;
     }
     if(keyCode===82){
-      location.href="game.html";
+      location.reload();
     }
   }
