@@ -12,6 +12,8 @@
         font-size: 100px;
         font-family: "Courier New", Courier, monospace;
         text-align: center;
+        background-image: url("minecraft.jpg");
+        background-size: cover;
       }
       #score {
         position: absolute;
@@ -19,10 +21,36 @@
         z-index:1;
         font-size: 20px;
       }
+      #head {
+      color: black;
+      background-color: white;
+      clear: left;
+      width: auto;
+      position: static;
+      height: 50px;
+      text-align: left;
+
+      }
+      #headtext {
+      font-family: 'Encode Sans Expanded', sans-serif;
+      text-align:left;
+      font-size: 30px;
+      padding-left: 100vw;
+  }
+  #music {
+    float: right;
+    height: 5vh;
+  }
     </style>
+      <header id="head">
+        <h1 id="score">Score: 0</h1>
+        <audio id="music" src="yeet.mp3" autoplay loop controls></audio>
+    </div>
+    </header>
     <audio id="tntsound">
       <source src="tnt.mp3" type="audio/mpeg">
     </audio>
+    <audio id="jump" src="jump.mp3"></audio>
   </head>
   <body>
     <h1 id="score" placeholder="Score - 0"></h1>
@@ -30,6 +58,5 @@
     <script src="jumper.js">
     </script>
     <!--<script src="boxes.js"></script>-->
-    <audio id="music" src="yeet.mp3" autoplay  loop></audio>
   </body>
 </html>

@@ -11,14 +11,11 @@ let mcbg;
     frog = loadImage('tnt.png');
     stab = loadImage('redstone.png');
     bg = loadImage('minecraft.jpg');
-    mcbg = createVideo(['mcbg.mov', 'mcbg.webm']);
-    mcbg.hide();
     
   }
   function draw() {
     //background(color('purple'));
-    background(bg)
-    mcbg.loop();
+    background(bg);
     //background(image(mcbg, 150, 150));
     jumper.show();
     jumper.update();
@@ -30,10 +27,17 @@ let mcbg;
     print(hit);
     if (hit === true){
       noLoop();
-      var diefam = document.getElementById('tntsound');
-      diefam.play();
       var somethingmusical = document.getElementById('music');
       somethingmusical.pause();
+      //var scoreTally = Number(30) - Number(timeLeft);
+      var lost = document.body.innerHTML = "Press 'r' to Restart";
+      var header1 = document.createElement("H1");
+      var text1 = document.createTextNode("Your score is " + score);
+      header1.appendChild(text1);
+      document.body.appendChild(header1);
+      var diefam = new Audio('tnt.mp3');
+      diefam.play();
+
     }
     }
   function jumper() {
@@ -81,7 +85,7 @@ let mcbg;
     }
   }
   function barrier() {
-    this.gravity = Math.floor(Math.random()*20) + 10;
+    this.gravity = Math.floor(Math.random() * (20 - 10) ) + 10; //Math.floor(Math.random() * (max - min) ) + min;
     this.x = w + 100 ;
     this.wall = Math.floor(Math.random()*h-200);
     this.show=function(){
@@ -115,6 +119,8 @@ let mcbg;
     //}
     if(keyCode===32) {
       jumper.up();
+      var jump = new Audio('jump.mp3');
+      jump.play();
     }
     if(keyCode===16){
       jumper.y=0;
