@@ -4,17 +4,22 @@ var jumper = new jumper();
 var barrier = new barrier();
 var hit = false;
 var score = 0;
+let mcbg;
 
   function setup(){
     createCanvas(w,h);
     frog = loadImage('tnt.png');
     stab = loadImage('redstone.png');
     bg = loadImage('minecraft.jpg');
+    mcbg = createVideo(['mcbg.mov', 'mcbg.webm']);
+    mcbg.hide();
     
   }
   function draw() {
     //background(color('purple'));
-    background(bg);
+    background(bg)
+    mcbg.loop();
+    //background(image(mcbg, 150, 150));
     jumper.show();
     jumper.update();
     jumper.move();
@@ -40,6 +45,7 @@ var score = 0;
     this.show=function(){
       //fill(color('red'));
       image(stab,this.x-100,this.y-100,50,50);
+      //image(mcbg, 10, 10);
       rect(this.x,this.y,50,50);
       strokeWeight(0);
       this.move = function () {
