@@ -85,8 +85,8 @@ let mcbg;
     }
   }
   function barrier() {
-    this.gravity = Math.floor(Math.random() * (20 - 10) ) + 10; //Math.floor(Math.random() * (max - min) ) + min;
-    this.x = w + 100 ;
+    this.gravity = Math.floor(Math.random() * (20 - 10) ) + 109; //Math.floor(Math.random() * (max - min) ) + min;
+    this.x = w + 100;
     this.wall = Math.floor(Math.random()*h-200);
     this.show=function(){
       //fill(color('white'));
@@ -97,7 +97,7 @@ let mcbg;
     this.grav=function() {
       this.x-=this.gravity;
       if(this.x<-100){
-          this.gravity = Math.floor(Math.random()*30 - 10) + 10;
+          this.gravity = Math.floor(Math.random()*30) + 10;
           document.getElementById("score").innerHTML = "Score: " + score;
           score +=1;
           console.log(score);
