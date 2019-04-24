@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script src="p5.min.js"></script>
+    </head>
+    <body>
+        <script>
+            var img;
+            function preload() {
+                img = loadImage('gotem.png');
+            }
+            function setup() {
+                createCanvas(window.innerWidth,window.innerHeight,WEBGL);
+            }
+            function draw() {
+                background(255);
+                var locX = mouseX - width/2;
+                var locY = mouseY - height/2;
+                //directionalLight(r,g,b,x,y,z);
+                directionalLight(255,255,255,-locX,-locY,-175);
+                specularMaterial(255);
+                noStroke();
+                //rotateX(100);
+                //rotateY(45);
+                rotateY(mouseX/200);
+                rotateX(mouseY/200);
+                texture(img);
+                box(200);
+            }
+        </script>
+    </body>
+</html>
