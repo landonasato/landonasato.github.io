@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script src="p5.min.js"></script>
+        <script src="p5.dom.min.js"></script>
+    </head>
+    <body>
+        <script>
+            var capture;
+            function setup() {
+                createCanvas(window.innerWidth,window.innerHeight);
+                capture = createCapture(VIDEO);
+                capture.size(0,0);
+            }
+            function draw() {
+                background(255);
+                tint(255,255,255);
+                image(capture,0,0,1280,1000);
+                //capture = createCapture(VIDEO);
+
+                
+            }
+        </script>
+    </body>
+</html>

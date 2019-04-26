@@ -16,7 +16,7 @@
                 var locX = mouseX - width/2;
                 var locY = mouseY - height/2;
                 //directionalLight(r,g,b,x,y,z);
-                directionalLight(255,255,255,-locX,-locY,-175);
+                directionalLight(255,255,255,-locX,-locY,-1000);
                 specularMaterial(255);
                 noStroke();
                 //rotateX(100);
@@ -25,7 +25,7 @@
                 rotateX(mouseY/200);
                 texture(img);
                 //box(200);
-                torus(200,64,100,100);
+                //torus(200,64,100,100);
             }
         </script>
     </body>
