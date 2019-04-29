@@ -4,6 +4,14 @@
         <script src="../p5js/p5.geolocation.js"></script>
     </head>
     <body>
+        <a id='1'></a>
+        <a id='2'></a>
+        <a id='3'></a>
+        <a id='4'></a>
+        <a id='5'></a>
+        <a id='6'></a>
+        <a id='7'></a>
+
         <script>
         var geo = false; 
         var fence;
@@ -29,15 +37,17 @@
 
         }
         function insideTheFence(position){
-    print("INlat: " + position.latitude);
-    print("INlong: " + position.longitude);
-    print("user is inside of the fence")
+            document.body.style.backgroundColor ="green";
+    //print("INlat: " + position.latitude);
+    //print("INlong: " + position.longitude);
+    //print("user is inside of the fence")
 }
 
 function outsideTheFence(position){
-    print("OUTlat: " + position.latitude);
-    print("OUTlong: " + position.longitude);
-    print("user is outside of the fence")
+    //print("OUTlat: " + position.latitude);
+    //print("OUTlong: " + position.longitude);
+    //print("user is outside of the fence")
+    document.body.style.backgroundColor ="red";
 }
         </script>
     </body>
