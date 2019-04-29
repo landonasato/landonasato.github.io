@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <script src="../p5js/p5.min.js"></script>
+        <script src="../p5js/p5.geolocation.js"></script>
+    </head>
+    <body>
+        <script>
+        var geo = false; 
+        var fence;
+        var polygon = [
+            {lat: 21.312016, lon: -157.838460},
+            {lat: 21.312016, lon: -157.838460},
+            {lat: 21.312016, lon: -157.838460},
+            {lat: 21.312016, lon: -157.838460}
+        ]
+        function setup() {
+            if (geoCheck() == true) {
+                console.log("Geolocation exists");
+            }
+            else {
+                console.log("Nein");
+            }
+            fence = new geoFencePolygon(polygon, insideTheFence,
+            outsideTheFence, 'mi');
+            fenceOptions = {
+                enableHighAccuracy: true,
+                timeout: 2000
+            }
+
+        }
+        function insideTheFence(position){
+    print("INlat: " + position.latitude);
+    print("INlong: " + position.longitude);
+    print("user is inside of the fence")
+}
+
+function outsideTheFence(position){
+    print("OUTlat: " + position.latitude);
+    print("OUTlong: " + position.longitude);
+    print("user is outside of the fence")
+}
+        </script>
+    </body>
+</html>
