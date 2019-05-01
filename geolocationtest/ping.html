@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <script src="../p5js/p5.min.js"></script>
+    <script src="../p5js/p5.geolocation.js"></script>
+</head>
+
+<body>
+    
+    <h1 id="locAvail"></h1>
+    <h1 id="distance"></h1>
+    <script>
+        var display = document;
+        var distance;
+        var mylat;
+        var mylon;
+        var treasurelat = 21.311285;
+        var treasurelon = -157.837918;
+        var houselat =50.113153;
+        var houselon =-122.953744;
+
+        function setup() {
+            if (geoCheck() == true) {
+                display.getElementById('locAvail').innerHTML = "Looking for you boi";       
+        }
+            intervalCurrentPosition(positionPing,1);
+            enableHighAccuracy: true;
+        }
+
+        function positionPing(position) {
+            mylat = position.latitude; //Get user latitude
+            mylon = position.longitude; //Get user longitude
+            distance = calcGeoDistance(houselat,houselon,treasurelat,treasurelon,'mi');
+            display.getElementById('distance').innerHTML = distance;
+        }
+
+
+
+       
+    </script>
+</body>
+
+</html>
