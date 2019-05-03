@@ -1,6 +1,7 @@
 .index {
-  background-image:url("seattle.jpeg");
+  background-image:url("indexback.jpg");
   background-size:cover;
+  background-attachment: fixed;
 
 }
 .index1 {
@@ -65,13 +66,16 @@
   margin-top: 30px;
 }
 #divleft {
+  float:left;
   padding: 1.0em;
   color: black;
   background-color: white;
-  width: 50vw;
+  width: 45vw;
   min-height: 40vh;
   border-radius: 10px;
   margin-top: 30px;
+  margin-right: 20px;
+  opacity: 0.9;
 
 }
 #divBook {

@@ -1,0 +1,33 @@
+
+<!-- saved from url=(0028)http://thisdotstuff.com/geo/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <script src="./thisdotstuff.com_files/p5.min.js.download"></script>
+</head>
+
+<body>
+    <h1 id="distance">Distance from red square: 457.9013309723505</h1>
+
+    <script>
+        var w = window.innerWidth;
+        var h = window.innerHeight;
+        var distance; //A global variable that will receive an integer value of distance
+
+        function setup() {
+            createCanvas(w, h, WEBGL);
+        }
+
+        function draw() {
+            background(255);
+            strokeWeight(1);
+            fill(color("red"));
+            rotateX(millis() / mouseX);
+            rotateY(millis() / mouseY);
+            box(60);
+            //rect(w/2,h/2,10,10); //Generate the center point
+            distance = dist(mouseX, mouseY, w / 2, h / 2); //Calculate the distance between the current mouse cursor position and the red square.
+            document.getElementById('distance').innerHTML = "Distance from red square: " + distance; //Print distance to screen
+        }
+    </script>
+
+
+<canvas id="defaultCanvas0" class="p5Canvas" width="1920" height="937" style="width: 1920px; height: 937px;"></canvas></body></html>

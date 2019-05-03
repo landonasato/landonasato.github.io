@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- saved from url=(0028)http://thisdotstuff.com/geo/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Geolocation test</title>
+    <script src="../p5js/p5.min.js"></script>
+    <script src="../p5js/p5.geolocation.js"></script>
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    </style>
+</head>
+
+<body>
+    <h1>Can you find the treasure?</h1>
+    <p>Directions: Somewhere there is a secret treasure. You must move around to determine how far away you are. Distance is showin in miles.</p>
+    <hr>
+    <h1 id="locAvail">Ready</h1>
+    <h1 id="distance"></h1>
+    <script>
+        var $ = document
+        var distance;
+        var mylat;
+        var mylon;
+        var treasurelat = 21.311285;
+        var treasurelon = -157.837918;
+        /* calculates distance to a treasure location. Let's the user know how far they are away "in miles" to the treasure*/
+        function setup() {
+            if (geoCheck() == true) {
+                $.getElementById('locAvail').innerHTML = "Ready";
+                
+            } else {
+                $.getElementById('locAvail').innerHTML = "Must have GPS Enabled";
+            }
+            //500 is in milliseconds of how often location data will be pulled
+            intervalCurrentPosition(positionPing,500); 
+            enableHighAccuracy: true;
+        }
+
+        function positionPing(position) {
+            mylat = position.latitude;
+            mylon = position.longitude;
+            distance = calcGeoDistance(mylat,mylon,treasurelat,treasurelon,'mi');
+            $.getElementById('distance').innerHTML = "You are " + distance.toFixed(5) + " miles away.";
+            if (distance < 0.008) { //The closer the number reaches 0.001, the sensitivity increases.
+                $.getElementById('locAvail').innerHTML = "YOU FOUND THE TREASURE!";
+                $.body.style.backgroundColor = "#E55934";
+            }
+            else if (distance < 0.1) {
+                $.getElementById('locAvail').innerHTML = "Getting Warmer";
+                $.body.style.backgroundColor = "#FDE74C";
+            }
+            else {
+                $.getElementById('locAvail').innerHTML = "Cold";
+                $.body.style.backgroundColor = "#3C91E6";
+            }
+        }
+    </script>
+
+
+<canvas id="defaultCanvas0" class="p5Canvas" width="100" height="100" style="width: 100px; height: 100px;"></canvas></body></html>
