@@ -7,12 +7,12 @@
         <h1 id="px"></h1>
         <h1 id="rx"></h1>
         <script>
-            var rx;
-            var prevx = 0;
             function setup() {
                 createCanvas(window.innerWidth,window.innerHeight);
             }
             function draw() {
+                var rx;
+            var prevx = 0;
                 rx = rotationX.toFixed(1);
                 if (rx > prevx) {
                     prevx = rx;
