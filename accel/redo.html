@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script src="../p5js/p5.min.js"></script>
+    </head>
+    <body>
+        <h1 id="ax"></h1>
+        <h1 id="ay"></h1>
+        <script>
+            var ax;
+            var ay;
+            var arrayX = [];
+            var arrayY = [];
+            function setup() {
+                createCanvas(window.innerWidth,window.innerHeight);
+            }
+            function draw() {
+                ax = accelerationX;
+                if (ax < xHigh) {
+                    ax = xHigh;
+                    document.getElementById('ax').innerHTML = ax;
+                }
+                console.log(xHigh);
+            }
+        </script>
+    </body>
+</html>

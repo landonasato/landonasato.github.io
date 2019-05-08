@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script src="../p5js/p5.min.js"></script>
+    </head>
+    <body>
+        <h1>Movement Data:</h1>
+        <h1 id="px"></h1>
+        <h1 id="rx"></h1>
+        <script>
+            var rx;
+            var prevx = 0;
+            function setup() {
+                createCanvas(window.innerWidth,window.innerHeight);
+            }
+            function draw() {
+                rx = rotationX.toFixed(1);
+                if (rx > prevx) {
+                    prevx = rx;
+                }
+                if (prevx != rx) {
+                    doument.body.style.backgroundColor = "red";
+                }
+                else {
+                    document.body.style.backgroundColor = "white";
+                }
+                document.getElementById('rx').innerHTML = "X Axis:" + rx;
+                document.getElementById('px').innerHTML = prevx;
+            }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script src="../p5js/p5.min.js"></script>
+    </head>
+    <body>
+        <h1>Movement Data:</h1>
+        <h1 id="ax"></h1>
+        <script>
+            var ax;
+            var arrayX = [];
+            function setup() {
+                createCanvas(window.innerWidth,window.innerHeight);
+            }
+            function draw() {
+                ax = accelerationX;
+                arrayX.push(ax);
+                arrayX.sort(function(a,b){
+                    return(b-a);
+                    document.getElementById('ax').innerHTML = ax;
+                });
+                ay = accelerationY;
+                //document.getElementById('ax').innerHTML = ax;
+                document.getElementById('ay').innerHTML = ay;
+                console.log(arrayX);
+
+                //var diefam = new Audio('scream.mp3');
+                //diefam.play();
+            }
+        </script>
+    </body>
+</html>
