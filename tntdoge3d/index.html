@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <script src="p5.min.js"></script>
+    <script src="p5.collide2d.min.js"></script>
+    <script src="p5.dom.js"></script>
+    <style>
+      body {
+        overflow:hidden;
+        margin:0;
+        padding:0;
+        font-size: 4vh;
+        font-family: "Courier New", Courier, monospace;
+        text-align: center;
+        background-image: url("minecraft.jpg");
+        background-size: cover;
+      }
+      #score {
+        position: absolute;
+        float: right;
+        z-index:1;
+        font-size: 20px;
+      }
+      #head {
+      color: black;
+      background-color: white;
+      clear: left;
+      width: auto;
+      position: static;
+      height: 50px;
+      text-align: left;
+
+      }
+      #headtext {
+      font-family: 'Encode Sans Expanded', sans-serif;
+      text-align:left;
+      font-size: 30px;
+      padding-left: 100vw;
+  }
+  #music {
+    float: right;
+    height: 5vh;
+  }
+  #div {
+  overflow:auto;
+  color: black;
+  background-color: white;
+  min-width: 10vw;
+  max-width:50vw;
+  min-height: 10vh;
+  border-radius: 10px;
+  border-top:100px;
+  margin-left: 25vw; 
+  margin-top: 4vh;
+}
+    </style>
+      <header id="head">
+        <h1 id="score">TNT Dodge</h1>
+        <audio id="music" src="minecraftheme.mp3" autoplay loop controls></audio>
+    </div>
+    </header>
+  <body>
+    <script>
+      function setup() {
+      }
+      function keyPressed() {
+        if(keyCode === 32) {
+        location.href="game.html";
+    }
+      }
+      </script>
+      <div id="div">
+      <a href="game.html">Controls</a>
+      <p>Tap the screen to jump</p>
+      </div>
+  </body>
+</html>
