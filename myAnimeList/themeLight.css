@@ -1557,16 +1557,13 @@ footer{
    content:"\f00d Close";
    font:12px/26px Arial,FontAwesome,sans-serif
 }
-#fancybox-wrap[style*="width: 320px;
-"]{
+#fancybox-wrap[style*="width: 320px;"]{
    height:120px!important
 }
-[style*="width: 320px;
-"] #fancybox-inner{
+[style*="width: 320px;"] #fancybox-inner{
    height:calc(100% - 20px)!important
 }
-div[style^="width: 300px;
-"]{
+div[style^="width: 300px;"]{
    display:flex;
    height:100%!important;
    flex-flow:column nowrap;
@@ -1574,12 +1571,10 @@ div[style^="width: 300px;
    color:var(--text);
    font-size:13px!important
 }
-div[style^="width: 300px;
-"] div{
+div[style^="width: 300px;"] div{
    font-size:0
 }
-div[style^="width: 300px;
-"] input{
+div[style^="width: 300px;"] input{
    display:block;
    width:240px;
    height:26px;
@@ -1593,8 +1588,7 @@ div[style^="width: 300px;
    transition:all .3s ease;
    cursor:pointer
 }
-div[style^="width: 300px;
-"] input:hover{
+div[style^="width: 300px;"] input:hover{
    background:var(--btn-bg-h);
    color:var(--btn-text-h)
 }
