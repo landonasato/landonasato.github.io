@@ -1,0 +1,19 @@
+{
+	"changelog": {
+		"currentversion": "1.3.3"
+	},
+	"settings": {
+		"showInChat": true,
+		"showInEmbed": true,
+		"showOnHover": false,
+		"changeForEdit": false,
+		"displayTime": true,
+		"displayDate": true,
+		"cutSeconds": false,
+		"forceZeros": false,
+		"otherOrder": false
+	},
+	"choices": {
+		"creationDateLang": "$discord"
+	}
+}

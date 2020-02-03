@@ -1,0 +1,18 @@
+{
+	"changelog": {
+		"currentversion": "1.9.1"
+	},
+	"choices": {
+		"inputContext": "auto",
+		"outputContext": "en",
+		"inputMessage": "auto",
+		"outputMessage": "ja"
+	},
+	"engines": {
+		"translator": "google"
+	},
+	"settings": {
+		"addTranslateButton": true,
+		"sendOriginalMessage": false
+	}
+}

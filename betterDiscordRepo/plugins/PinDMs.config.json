@@ -1,0 +1,26 @@
+{
+	"changelog": {
+		"currentversion": "1.5.9"
+	},
+	"dmCategories": {
+		"3865701986261092": {
+			"collapsed": false,
+			"dms": [
+				"408780269877723150",
+				"476726207312953354",
+				"610981507221159947",
+				"641888151517790211"
+			],
+			"id": "3865701986261092",
+			"name": "Pinned Direct Messages",
+			"pos": 0
+		}
+	},
+	"settings": {
+		"showCategoryAmount": true,
+		"showCategoryUnread": true,
+		"showPinIcon": false,
+		"sortInRecentOrder": false,
+		"sortInRecentOrderGuild": false
+	}
+}

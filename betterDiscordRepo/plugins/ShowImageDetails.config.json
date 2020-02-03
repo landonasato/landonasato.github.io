@@ -1,0 +1,11 @@
+{
+	"amounts": {
+		"hoverDelay": 0
+	},
+	"changelog": {
+		"currentversion": "1.1.7"
+	},
+	"settings": {
+		"showOnHover": false
+	}
+}

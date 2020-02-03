@@ -1,0 +1,20 @@
+{
+	"amounts": {
+		"hoverDelay": 0
+	},
+	"categorystatus": {
+		"454549612372557824": true,
+		"319141171937148928": true
+	},
+	"changelog": {
+		"currentversion": "2.6.9"
+	},
+	"settings": {
+		"showAnnouncement": true,
+		"showForNormal": false,
+		"showStore": true,
+		"showText": true,
+		"showVoice": true,
+		"sortNative": false
+	}
+}
