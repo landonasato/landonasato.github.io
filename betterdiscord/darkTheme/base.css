@@ -809,7 +809,7 @@ html.theme-light body.bd-minimal #app-mount::before {
 /*2.c. Wordmark*/
 
 .wordmark-2iDDfm {
-	opacity: 1;
+	opacity: 0;
 	width: 100%;
 	background: var(--lv1);
 	padding: 0;
