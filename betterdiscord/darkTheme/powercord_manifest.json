@@ -1,0 +1,8 @@
+{
+    "name": "Midnight UI",
+    "description": "A clean, dark, and modern user interface for DiscordApp. Fully customizable through the theme file.",
+    "version": "2.5",
+    "author": "Tropical",
+    "license": "MIT",
+    "theme": "midnight.css"
+}
