@@ -37,6 +37,10 @@
   -webkit-box-shadow: 10px 10px 5px #ccc;
   -khtml-box-shadow: 10px 10px 5px #ccc;
 }
+#headtext {
+  font-family: 'Encode Sans Expanded', sans-serif;
+  text-align:left;
+}
 #parallax {
     background-image: url('seattle.jpeg');
     height: 50%;
@@ -59,6 +63,16 @@
   font-size: 34px;
   text-align: center;
   color: white;
+}
+#header3 {
+  font-family: 'Encode Sans Expanded', sans-serif;
+  font-size: 34px;
+  text-align: center;
+  color: black;
+  border-radius: 10px;
+  background-color: white;
+  opacity: 0.8;
+  padding-bottom: 20px;
 }
 #divindex {
   padding: 1.0em;
