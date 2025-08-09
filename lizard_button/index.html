@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>🦎 Lizard Button Clicker</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+body {
+  background: linear-gradient(to bottom right, #f0fdf4, #fefce8);
+}
+</style>
+</head>
+<body class="flex items-center justify-center min-h-screen">
+
+<div class="bg-gradient-to-br from-green-50 to-yellow-50 rounded-lg shadow-lg overflow-hidden">
+  <div class="relative" style="min-height:500px">
+    <div class="flex flex-col items-center justify-center p-8 relative z-10">
+      <div class="mb-6 text-center">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">🦎</h2>
+        <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mb-4">
+          <div class="bg-white/80 rounded-lg px-4 py-2 shadow">
+            <div class="text-sm text-gray-600">Clicks</div>
+            <div id="clickCount" class="text-2xl font-bold text-green-600">0</div>
+          </div>
+          <div class="bg-white/80 rounded-lg px-4 py-2 shadow">
+            <div class="text-sm text-gray-600">CPS</div>
+            <div id="cpsCount" class="text-2xl font-bold text-yellow-600">0</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative">
+        <button id="lizardBtn" class="relative transition-transform hover:scale-105 active:scale-95 focus:outline-none bg-transparent border-none p-0" style="width:300px;height:225px">
+          <img src="lizard.png" alt="Lizard" class="w-full h-full object-contain transition-opacity hover:opacity-90">
+          <div class="absolute inset-0 bg-white opacity-0 hover:opacity-10 transition-opacity"></div>
+        </button>
+      </div>
+
+      <div class="mt-6 text-center max-w-md"></div>
+    </div>
+
+    <div class="absolute bottom-4 right-4 flex gap-2 z-20">
+      <button id="resetBtn" class="bg-white/90 hover:bg-white text-gray-700 hover:text-red-600 p-2 rounded-lg shadow-lg transition-all duration-200 backdrop-blur-sm" title="Reset Game">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z" fill="currentColor"></path></svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+let clicks = parseInt(localStorage.getItem("lizardClicks")) || 0;
+let startTime = null;
+let sessionStartClicks = 0;
+let cpsInterval;
+
+const clickCountEl = document.getElementById("clickCount");
+const cpsCountEl = document.getElementById("cpsCount");
+const lizardBtn = document.getElementById("lizardBtn");
+const resetBtn = document.getElementById("resetBtn");
+clickCountEl.textContent = clicks;
+
+const clickSound = new Audio("lizard.mp3");
+
+lizardBtn.addEventListener("click", () => {
+  clicks++;
+  clickCountEl.textContent = clicks;
+  localStorage.setItem("lizardClicks", clicks);
+
+  clickSound.currentTime = 0;
+  clickSound.play();
+
+  if (!startTime) {
+    startTime = Date.now();
+    sessionStartClicks = clicks;
+    cpsInterval = setInterval(updateCPS, 200);
+  }
+});
+
+function updateCPS() {
+  const elapsedSeconds = (Date.now() - startTime) / 1000;
+  const cpsVal = (clicks - sessionStartClicks) / elapsedSeconds;
+  cpsCountEl.textContent = Number.isFinite(cpsVal) ? cpsVal.toFixed(2) : "0";
+}
+
+resetBtn.addEventListener("click", () => {
+  clicks = 0;
+  startTime = null;
+  sessionStartClicks = 0;
+  clickCountEl.textContent = "0";
+  cpsCountEl.textContent = "0";
+  clearInterval(cpsInterval);
+  localStorage.setItem("lizardClicks", "0");
+});
+</script>
+
+
+</body>
+</html>
